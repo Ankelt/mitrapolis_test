@@ -22,7 +22,7 @@ public class LoginPageTest extends BaseTest{
     public void correctAuthorise() {
         LoginPage loginPage = new LoginPage(driver, MITRAPOLIS_LOGIN_PAGE);
         loginPage.open();
-        loginPage.login(INCORRECT_LOGIN, CORRECT_PASSWORD);
+        loginPage.login(CORRECT_LOGIN, CORRECT_PASSWORD);
         MainPage mainPage = new MainPage(driver, driver.getCurrentUrl());
         Assert.assertTrue("Not a main page", isElementPresent(MAIN_PAGE));
     }
